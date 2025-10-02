@@ -44,10 +44,15 @@ int main(){
     printf("Tamanho do array string 1 => %d\n", tamanho_array_ao1);
     printf("Tamanho do array string 2 => %d\n\n\n", tamanho_array_ao2);
 
-    char nome[50];
-    printf("Digite seu nome: ");
-    scanf("%s", nome); // o scanf le a string ATE o primeiro espaco, ent se eu digitar "Ana Luiza" ele so vai ler "Ana"
-    printf("Ferrou, %s!\n", nome);
+    // char nome[50];
+    char n[50];
+    // printf("Digite seu nome: ");
+    // scanf("%s", nome); // o scanf le a string ATE o primeiro espaco, ent se eu digitar "Ana Luiza" ele so vai ler "Ana"
+    // printf("Ferrou, %s!\n", nome); // saida: Ana para um nome composto Ana Luiza
+    printf("Outra forma de pegar nomes:\n");
+    printf("Digite outro nome: ");
+    scanf("%[^\n]", n);
+    printf("Ola, %s!\n", n); //saida: Ana Luiza para um nome composto Ana Luiza
 
     return 0;
 }
